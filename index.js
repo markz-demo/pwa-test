@@ -52,7 +52,7 @@ async function registWorker() {
         //     return;
         // }
 
-        const registration = await navigator.serviceWorker.register(`/pwa-test/service-worker.js`, { scope: '/pwa-test' });
+        const registration = await navigator.serviceWorker.register(`/pwa-test/service-worker.js`, { scope: '/pwa-test/' });
         log('ServiceWorker registration successful with scope: ' + registration.scope);
     }
     catch (e) {
@@ -77,7 +77,7 @@ navigator.serviceWorker.addEventListener('message', function (e) {
 
 // todo
 async function subscribe() {
-    const registration = await navigator.serviceWorker.getRegistration('/pwa-test')
+    const registration = await navigator.serviceWorker.getRegistration('/pwa-test/')
     if (!registration) {
         log('cannot found registration')
         return;
@@ -118,7 +118,7 @@ async function showNotification() {
         return
     }
 
-    const registration = await navigator.serviceWorker.getRegistration('/pwa-test')
+    const registration = await navigator.serviceWorker.getRegistration('/pwa-test/')
     if (!registration) {
         log('cannot found registration, need regist ServiceWorker first.')
         return;
@@ -145,7 +145,7 @@ async function showNotification2() {
         return
     }
 
-    const registration = await navigator.serviceWorker.getRegistration('/pwa-test')
+    const registration = await navigator.serviceWorker.getRegistration('/pwa-test/')
     if (!registration) {
         log('cannot found registration, need regist ServiceWorker first.')
         return;

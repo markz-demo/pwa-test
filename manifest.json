@@ -20,5 +20,10 @@
     ],
     "display": "standalone",
     "scope": "/",
-    "start_url": "/"
+    "start_url": "/",
+    "url_handlers": [
+        {
+            "origin": "https://markz-demo.github.io"
+        }
+    ]
 }
