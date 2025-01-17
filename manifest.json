@@ -29,7 +29,7 @@
     "protocol_handlers": [
         {
             "protocol": "web+mypwa",
-            "url": "/index.html?url=%s"
+            "url": "/index.html?page=%s"
         }
     ]
 }
