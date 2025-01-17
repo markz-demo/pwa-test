@@ -6,22 +6,23 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const urlParams = new URLSearchParams(window.location.search);
     const page = urlParams.get('page');
+    if (page) {
+        alert(`page=${page}`)
 
-    alert(`page=${page}`)
-
-    // switch (page) {
-    //     case 'profile':
-    //         // 跳转到 /profile.html 或在当前页面加载 profile 内容
-    //         window.location.href = '/profile.html';  // 示例：跳转到新页面
-    //         break;
-    //     case 'settings':
-    //         // 跳转到 /settings.html 或在当前页面加载 settings 内容
-    //         window.location.replace('/settings.html'); // 示例：替换当前历史记录
-    //         break;
-    //     default:
-    //         // 显示默认内容
-    //         console.log('Loading default content');
-    // }
+        // switch (page) {
+        //     case 'profile':
+        //         // 跳转到 /profile.html 或在当前页面加载 profile 内容
+        //         window.location.href = '/profile.html';  // 示例：跳转到新页面
+        //         break;
+        //     case 'settings':
+        //         // 跳转到 /settings.html 或在当前页面加载 settings 内容
+        //         window.location.replace('/settings.html'); // 示例：替换当前历史记录
+        //         break;
+        //     default:
+        //         // 显示默认内容
+        //         console.log('Loading default content');
+        // }
+    }
 });
 
 const msgs = [];
