@@ -25,5 +25,11 @@
         {
             "origin": "https://markz-demo.github.io"
         }
+    ],
+    "protocol_handlers": [
+        {
+            "protocol": "web+mypwa",
+            "url": "/index.html?url=%s"
+        }
     ]
 }

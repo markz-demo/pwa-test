@@ -1,10 +1,28 @@
-
-document.body.onload = () => {
+window.addEventListener('DOMContentLoaded', () => {
     document.getElementById('btn1').onclick = requestPermission;
     document.getElementById('btn2').onclick = registWorker;
     document.getElementById('btn3').onclick = showNotification;
     document.getElementById('btn4').onclick = showNotification2;
-}
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const page = urlParams.get('page');
+
+    alert(`page=${page}`)
+
+    // switch (page) {
+    //     case 'profile':
+    //         // 跳转到 /profile.html 或在当前页面加载 profile 内容
+    //         window.location.href = '/profile.html';  // 示例：跳转到新页面
+    //         break;
+    //     case 'settings':
+    //         // 跳转到 /settings.html 或在当前页面加载 settings 内容
+    //         window.location.replace('/settings.html'); // 示例：替换当前历史记录
+    //         break;
+    //     default:
+    //         // 显示默认内容
+    //         console.log('Loading default content');
+    // }
+});
 
 const msgs = [];
 function log(msg, type) {
@@ -65,7 +83,7 @@ navigator.serviceWorker.addEventListener('message', function (e) {
     log(`receive post-message from sw, action is '${action}'`);
     switch (action) {
         case 'notification:alert': {
-            alert({ content: `notification alert` });
+            alert(`notification alert`);
             break;
         }
         case 'notification:redirect-to-demo-page': {
